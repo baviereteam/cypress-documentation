@@ -223,6 +223,16 @@ cy.get('textarea').should('have.value', 'foo bar baz')
 cy.get('a').parent('span.help').should('not.contain', 'click me')
 ```
 
+```javascript
+// retry until the text in this element contains this substring (matches 0%, 10%, 20%, and so on)
+cy.get('#score').should('contain', '0%')
+```
+
+```javascript
+// retry until the text in this element contains this string exactly
+cy.get('a').parent('span.help').should('have.text', '100%')
+```
+
 ## Visibility
 
 ```javascript
